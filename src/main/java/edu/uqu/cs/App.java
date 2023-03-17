@@ -1,4 +1,5 @@
 package edu.uqu.cs;
+import java.util.Scanner;
 /*
  * Lab 0 
  * CS 1312
@@ -43,16 +44,63 @@ public class App{
 *
 */
  
-    public static void main(String [] args) {
-        
-
-        /* Write your code here */
-     
-       //call method twisters()
-       //prompt user to enter a string 
-       //call method phoneKeypad(string)
-
-
+public static void twisters () {
+    for(int x= 1; x<=20; x++){
+        if (x%2==0){
+            System.out.print( " Tweetle " );}
+        {
+             if (x%4==0){
+            System.out.print(" Beetle " );}
+             {
+                if (x%6==0){
+            System.out.print( " Poodle " );
+                }
+             else
+    
+            {
+             System.out.print( x );
+                    }
+         
+             System.out.print( "  " );}
+        }
     }
+ }
+public static void phoneKeypad(String str) {
+String nums = "" ;
+for ( int i = 0 ; i <= str.length() ; i++ ) {
+char ch = str.toUpperCase().charAt(i) ;
+switch ( str.charAt(i) ) 
+{
+    case 'A' , 'B' , 'C' : nums += 2 ;
+    break;
+    case 'D' , 'E' , 'F' : nums += 3 ;
+    break;
+    case 'G' , 'H' , 'I' : nums += 4 ;
+    break;
+    case 'J' , 'K' , 'L' : nums += 5 ;
+    break;
+    case 'M' , 'N' , 'O' : nums += 6 ;
+    break;
+    case 'P' , 'Q' , 'R' , 'S' : nums += 7 ;
+    break;
+    case 'T' , 'U' , 'V' : nums += 8 ;
+    break;
+    case 'W' , 'X' , 'Y' , 'Z' : nums += 9 ;
+    break;
+    
+}
+}
 
+
+System.out.println(nums);
+
+ }  
+ 
+public static void main(String[] args) {
+ twisters();
+Scanner scr =new Scanner (System.in);
+String str = scr.nextLine();
+phoneKeypad(str);
+ 
+}    
 }

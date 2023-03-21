@@ -65,42 +65,69 @@ public static void twisters () {
         }
     }
  }
-public static void phoneKeypad(String str) {
-String nums = "" ;
-for ( int i = 0 ; i <= str.length() ; i++ ) {
-char ch = str.toUpperCase().charAt(i) ;
-switch ( str.charAt(i) ) 
-{
-    case 'A' , 'B' , 'C' : nums += 2 ;
-    break;
-    case 'D' , 'E' , 'F' : nums += 3 ;
-    break;
-    case 'G' , 'H' , 'I' : nums += 4 ;
-    break;
-    case 'J' , 'K' , 'L' : nums += 5 ;
-    break;
-    case 'M' , 'N' , 'O' : nums += 6 ;
-    break;
-    case 'P' , 'Q' , 'R' , 'S' : nums += 7 ;
-    break;
-    case 'T' , 'U' , 'V' : nums += 8 ;
-    break;
-    case 'W' , 'X' , 'Y' , 'Z' : nums += 9 ;
-    break;
+ public static void phoneKeypad(String str) {
+    String nums = "" ;
+    for ( int i = 0 ; i <= str.length() ; i++ ) {
+    char ch = str.toUpperCase().charAt(i) ;
+    switch ( ch ) 
+    {
+        case 'A' :
+        case 'B':
+        case 'C' :
+        nums += '2' ;
+        break;
+        case 'D' :
+           case 'E' :
+             case'F' :
+            nums += '3' ;
+        break;
+        case 'G' :
+        case 'H' :
+            case'I' :
+          nums += '4' ;
+        break;
+        case 'J':
+            case 'K':
+            case 'L' : 
+                nums += '5' ;
+        break;
+        case 'M':
+            case 'N':
+                case 'O' :
+                    nums += '6' ;
+        break;
+        case 'P' :
+        case  'Q':
+            case 'R':
+               case 'S' : 
+                   nums += '7';
+        break;
+        case 'T':
+            case 'U':
+            case  'V' :
+                nums += '8' ;
+        break;
+        case 'W' :
+    case'X':
+        case 'Y':
+            case 'Z' :
+                nums += '9' ;
+        break;
+        
+    }
+    }
     
-}
-}
-
-
-System.out.println(nums);
-
- }  
- 
-public static void main(String[] args) {
- twisters();
-Scanner scr =new Scanner (System.in);
-String str = scr.nextLine();
-phoneKeypad(str);
- 
-}    
-}
+    
+    System.out.println(nums);
+    
+     }  
+    
+     
+    public static void main(String[] args) {
+     twisters();
+    Scanner scr =new Scanner (System.in);
+    String str = scr.nextLine();
+    phoneKeypad(str);
+     
+    }    
+    }
